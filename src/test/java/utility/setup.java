@@ -16,6 +16,8 @@ public class setup {
 	@Parameters("browser")
 	@BeforeMethod
 	public void setup(String browser) {
+		System.out.println("Running tests on: " + browser);
+
 		try {
 			if(browser.equalsIgnoreCase("chrome")) {
 				WebDriverManager.chromedriver().setup();
