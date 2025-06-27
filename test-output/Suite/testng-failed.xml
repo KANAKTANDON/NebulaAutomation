@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="TestBlock2 (failed)">
-    <groups>
-      <run>
-        <include name="smoke"/>
-      </run>
-    </groups>
+<suite parallel="methods" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="env" value="QA"/>
+  <test thread-count="5" parallel="methods" name="TestBlock2 (failed)">
     <classes>
-      <class name="April_21.testclass">
+      <class name="utility.testclass">
         <methods>
-          <include name="TC_01"/>
+          <include name="TC02_Login_InCorrectUser"/>
+          <include name="TC01_Login_CorrectUser"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- April_21.testclass -->
+      </class> <!-- utility.testclass -->
     </classes>
   </test> <!-- TestBlock2 (failed) -->
 </suite> <!-- Failed suite [Suite] -->

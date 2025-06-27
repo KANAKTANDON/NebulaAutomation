@@ -15,6 +15,13 @@
   </properties>
 
   <dependencies>
+	 				 <!-- WEBDRIVER MANAGER MAVEN DEPENDENCY -->
+	 				 <dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>5.7.0</version> <!-- You can check for the latest version -->
+</dependency>
+
 	  
     <dependency>
     <groupId>org.seleniumhq.selenium</groupId>

@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite parallel="methods" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="env" value="QA"/>
+  <test thread-count="5" parallel="methods" name="TestBlock2 (failed)">
     <classes>
-      <class name="dataDrivenTesting.testclass">
+      <class name="utility.testclass">
         <methods>
+          <include name="TC02_Login_InCorrectUser"/>
+          <include name="TC01_Login_CorrectUser"/>
           <include name="setup"/>
-          <include name="TC01"/>
         </methods>
-      </class> <!-- dataDrivenTesting.testclass -->
+      </class> <!-- utility.testclass -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- TestBlock2 (failed) -->
+</suite> <!-- Failed suite [Suite] -->
