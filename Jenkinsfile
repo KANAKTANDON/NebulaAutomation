@@ -28,7 +28,7 @@ pipeline {
                 // mvn clean = clean up previous builds
                 // mvn compile = compile Java classes
                 // -DskipTests = skip running tests in this stage
-                sh 'mvn clean compile -DskipTests'
+                bat 'mvn clean compile -DskipTests'
             }
         }
 
@@ -37,7 +37,7 @@ pipeline {
             steps {
                 // This command runs test cases and passes the browser value as a system property
                 // In your Java code, you’ll read it using: System.getProperty("browser")
-                sh "mvn test -Dbrowser=${browser}"
+                bat "mvn test -Dbrowser=${browser}"
             }
         }
     }
