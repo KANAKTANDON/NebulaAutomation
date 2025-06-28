@@ -17,8 +17,8 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 // Replace the Git URL with your actual repo URL
-                git branch: 'main',
-                    url: 'https://github.com/your-org/your-repo.git'
+                git branch: 'master',
+                    url: 'https://github.com/KANAKTANDON/NebulaAutomation.git'
             }
         }
 
