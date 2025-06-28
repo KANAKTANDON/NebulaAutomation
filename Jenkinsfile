@@ -6,9 +6,7 @@ pipeline {
 
     // This defines a parameter that will be visible when you click "Build with Parameters" in Jenkins
     // You can choose which browser to run the tests on (like chrome, edge, firefox, etc.)
-    parameters {
-        string(name: 'browser', defaultValue: 'chrome', description: 'Browser to run tests on')
-    }
+   
 
     // These are the main stages shown in Stage View (like you saw in the screenshot)
     stages {
